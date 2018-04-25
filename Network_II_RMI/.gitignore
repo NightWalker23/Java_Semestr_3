@@ -1,0 +1,7 @@
+*.iml
+out/*
+.idea/*
+*.txt
+*.zip
+*.bin
+*.properties

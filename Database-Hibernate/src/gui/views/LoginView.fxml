@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.LoginViewController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="75.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label text="Sign In">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="loginUsername" alignment="TOP_CENTER" promptText="username">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin></TextField>
+            <PasswordField fx:id="loginPassword" alignment="TOP_CENTER" promptText="password">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin></PasswordField>
+            <Button mnemonicParsing="false" onAction="#login" text="Login" />
+            <Label fx:id="loginComunicat" textFill="RED" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="75.0" layoutY="225.0" prefHeight="239.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label text="Sign Up">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="registerUsername" alignment="TOP_CENTER" promptText="username">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin></TextField>
+            <PasswordField fx:id="registerPassword" alignment="TOP_CENTER" promptText="password">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin></PasswordField>
+            <SplitMenuButton fx:id="registerRole" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Choose role ">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#adminClicked" text="ADMIN" />
+                <MenuItem mnemonicParsing="false" onAction="#userClicked" text="USER" />
+              </items>
+            </SplitMenuButton>
+            <Button mnemonicParsing="false" onAction="#register" text="Register" />
+            <Label fx:id="registerComunicat" textFill="RED" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
